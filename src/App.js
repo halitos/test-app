@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./card";
 
 function App() {
+  const repeatCount = [1, 2, 3, 4, 5];
+  const repeatCount2 = [9, 8, 7, 6];
+  const allCount = [...repeatCount, ...repeatCount2];
+  allCount.sort((a, b) => a - b);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <h1 className="heading">Merhaba</h1>
+      </div>
+      <div className="second">
+        <Card allCount={allCount} />
+      </div>
     </div>
   );
 }
